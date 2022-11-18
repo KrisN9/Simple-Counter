@@ -1,20 +1,19 @@
 import React from "react";
-import SecondsCounter from "./SecondsCounter";
 
 //create your first component
-const Home = () => {
+const Home = (props) => {
 	return (
 		<>
-		<div className="container bg-dark text-light">
+		<div className="container bg-dark text-light d-flex justify-content-center">
 			<div className="row">
-				<p>Falta icono reloj</p>
+				<p><i className="bi bi-clock"></i></p>
 			</div>
-			<div id="one-digit">0</div>
-			<div id="two-digit">0</div>
-			<div id="three-digit">0</div>
-			<div id="four-digit">0</div>
-			<div id="five-digit">0</div>
-			<div id="six-digit">0</div>
+			<div id="six-digit">{props.sixDigit}</div>
+			<div id="five-digit">{props.fiveDigit}</div>
+			<div id="four-digit">{props.fourDigit}</div>
+			<div id="three-digit">{props.threeDigit}</div>
+			<div id="two-digit">{props.twoDigit}</div>
+			<div id="one-digit">{props.oneDigit}</div>
 		</div>
 		</>
 	);
