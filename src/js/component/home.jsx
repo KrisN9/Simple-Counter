@@ -1,11 +1,11 @@
 import React from "react";
-import CounterInterval from "./CounterInterval";
+import Counter from "./Counter";
 
 //create your first component
 const Home = (props) => {
 	return (
 		<>
-		<CounterInterval />
+		<Counter />
 		<div className="container bg-dark text-light d-flex justify-content-center">
 			<div className="row">
 				<p><i className="bi bi-clock"></i></p>
