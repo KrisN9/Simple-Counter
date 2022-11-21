@@ -5,7 +5,7 @@ import Counter from "./Counter";
 const Home = (props) => {
 	return (
 		<>
-		<Counter oneDigit = {one} />
+		<Counter />
 		<div className="container bg-dark text-light d-flex justify-content-center">
 			<div className="row">
 				<p><i className="bi bi-clock"></i></p>
