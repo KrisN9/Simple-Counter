@@ -1,23 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-let counter = 0;
-
-let Counter = setInterval(() => {
-    counter++;
-    const one = Math.floor(counter/1);
-    const two = Math.floor(counter/10);
-    const three = Math.floor(counter/100);
-    const four = Math.floor(counter/1000);
-    const five = Math.floor(counter/10000);
-    const six = Math.floor(counter/100000);
-    oneDigit = {one};
-    twoDigit = {two};
-    threeDigit = {three};
-    fourDigit = {four};
-    fiveDigit = {five};
-    sixDigit = {six};
-}, 1000)
+//create your first component
+const Counter = (props) => {
+	return (
+		<>
+		<div className="container bg-dark text-light d-flex justify-content-center">
+			<div className="row">
+				<p><i className="bi bi-clock"></i></p>
+			</div>
+			<div id="six-digit">{props.sixDigit % 10}</div>
+			<div id="five-digit">{props.fiveDigit % 10}</div>
+			<div id="four-digit">{props.fourDigit % 10}</div>
+			<div id="three-digit">{props.threeDigit % 10}</div>
+			<div id="two-digit">{props.twoDigit % 10}</div>
+			<div id="one-digit">{props.oneDigit % 10}</div>
+		</div>
+		</>
+	);
+};
 
 Counter.propTypes = {
     oneDigit: PropTypes.number,
@@ -28,4 +29,4 @@ Counter.propTypes = {
     sixDigit: PropTypes.number,
 };
 
-export default Counter
+export default Counter;
