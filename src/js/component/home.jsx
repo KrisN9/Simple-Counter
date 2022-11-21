@@ -23,7 +23,7 @@ const Home = (props) => {
     fourDigit = {four};
     fiveDigit = {five};
     sixDigit = {six}; */
-    return (<Counter oneDigit = {one}/>)
+    return (<Counter oneDigit = {one} twoDigit = {two} threeDigit = {three} fourDigit = {four} fiveDigit = {five} sixDigit = {six} />);
 }
 
 export default Home
